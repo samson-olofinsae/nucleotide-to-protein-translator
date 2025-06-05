@@ -15,7 +15,7 @@ Version: 1.0
 Date: 2025-06-04
 
 Usage Example:
-    python translate_v1.py --seq ATGGCGTAA
+    python3 translate_v1.py --seq ATGGCGTAA
 """
 
 import argparse  # Standard Python module for parsing command-line arguments
