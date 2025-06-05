@@ -13,4 +13,4 @@ Developed as part of clinical bioinformatics training in line with departmental 
 
 ## Usage
 ```bash
-python translate_v1.py --seq ATGGCGTAA
+python3 translate_v1.py --seq ATGGCGTAA
