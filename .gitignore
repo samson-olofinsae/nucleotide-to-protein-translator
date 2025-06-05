@@ -1,0 +1,9 @@
+# Ignore Python cache folders generated during execution or testing
+__pycache__/
+
+# Ignore compiled Python bytecode files (*.pyc)
+*.pyc
+
+# Ignore local virtual environment directory (commonly named venv/)
+# This folder stores dependencies and should not be tracked in Git
+venv/
