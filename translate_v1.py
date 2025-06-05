@@ -54,7 +54,7 @@ class NucleotideTranslator:
         'TTC':'F', 'TTT':'F',                        # Phenylalanine
         'TTA':'L', 'TTG':'L',                        # Leucine
         'TAC':'Y', 'TAT':'Y',                        # Tyrosine
-        'TAA':'_', 'TAG':'_', 'TGA':'_',            # Stop codons (represented as '_')
+        'TAA':'*', 'TAG':'*', 'TGA':'*',            # Stop codons (represented as '*' based on HGVS Standard)
         'TGC':'C', 'TGT':'C',                        # Cysteine
         'TGG':'W'                                    # Tryptophan
     }
