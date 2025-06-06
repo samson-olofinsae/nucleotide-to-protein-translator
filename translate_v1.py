@@ -69,6 +69,12 @@ class NucleotideTranslator:
         self.sequence = sequence.upper()  # Normalise input to uppercase for consistency
 
     def validate(self):
+        
+        """Check if the sequence is an empty string (i.e., no input provided)
+        This prevents silent processing of empty inputs, which could cause confusion in clinical pipelines"""
+        if not self.sequence:
+            raise ValueError("Sequence is empty. Please provide a DNA sequence.")
+
         """
         Checks whether the sequence:
         - Contains only valid nucleotides (A, T, C, G)
@@ -77,6 +83,7 @@ class NucleotideTranslator:
         Raises:
         ValueError: If sequence fails either check.
         """
+        
         # Ensure the sequence length allows full codons
         if len(self.sequence) % 3 != 0:
             raise ValueError("Sequence length must be divisible by 3.")
