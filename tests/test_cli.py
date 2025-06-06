@@ -60,16 +60,19 @@ class TestCLINucleotideTranslator(unittest.TestCase):
 
     # Test that a sequence whose length is not divisible by 3 returns an error
     def test_length_not_multiple_of_three(self):
-        # This sequence has 15 bases (not divisible by 3) → should trigger validation error
+        # This sequence has 14 bases (not divisible by 3) → should trigger validation error
+        sequence = "AGGGGGGGGGGGGG"  
         result = subprocess.run(
-            [sys.executable, 'translate_v1.py', '--seq', 'AGGGGGGGGGGGGGG'],  # 15 bases
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            text=True
+        [sys.executable, 'translate_v1.py', '--seq', sequence],
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=True
         )
-        self.assertNotEqual(result.returncode, 0)  # Should return a non-zero error code
-        self.assertIn("length must be divisible by 3", result.stderr.lower())  # Expect this error message
-
-# This ensures the test suite runs when the script is executed directly (e.g., python test_cli.py)
+        self.assertNotEqual(result.returncode, 0)  # should return a non-zero error code
+        self.assertIn("length must be divisible by 3", result.stderr.lower()) # Expect this error message
+ 
+        
+        
+# This ensures the test suite runs when the script is executed directly (e.g., python3 test_cli.py)
 if __name__ == "__main__":
     unittest.main()

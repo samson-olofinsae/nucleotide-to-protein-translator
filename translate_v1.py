@@ -112,29 +112,42 @@ class NucleotideTranslator:
         return protein
 
 
+import sys  # Required to explicitly control script exit codes
+
 def main():
     """
     Main entry point for the script.
 
     Uses argparse to collect a DNA sequence from the command line.
     Instantiates the NucleotideTranslator class and prints the translated protein.
+    On validation failure, prints an error message to stderr and exits with status code 1.
     """
+    # Set up command-line argument parser
     parser = argparse.ArgumentParser(description="Translate nucleotide sequence to amino acids.")
     parser.add_argument('--seq', required=True, help="DNA sequence (e.g., ATGGCC...)")
-    args = parser.parse_args()  # Parse command-line arguments
+    
+    # Parse input arguments from command line
+    args = parser.parse_args()
 
-    # Create an instance of the translator class
+    # Instantiate the NucleotideTranslator with the provided sequence
     translator = NucleotideTranslator(args.seq)
 
     try:
-        # Attempt translation and print output
+        # Attempt to validate and translate the input DNA sequence
         protein = translator.translate()
+
+        # Output the resulting amino acid sequence to stdout
         print("Protein:", protein)
+
     except ValueError as e:
-        # Print error messages from validation
-        print("Error:", e)
+        # If validation fails, print the error message to stderr
+        print("Error:", e, file=sys.stderr)
+
+        # Exit with status code 1 to indicate an error (used by CLI tools and test suites)
+        sys.exit(1)
 
 
-# Standard Python practise to ensure the main block only runs when script is executed directly
+# Standard Python practice: run `main()` only if this script is executed directly
+# Prevents this block from running if the module is imported elsewhere
 if __name__ == "__main__":
     main()
