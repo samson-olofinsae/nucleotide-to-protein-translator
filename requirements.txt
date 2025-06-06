@@ -1,0 +1,19 @@
+# requirements.txt
+# ----------------
+# Dependency list for the nucleotide_to_protein project
+# Maintained for reproducibility and environment consistency
+# Generated on: 2025-06-06
+# Author: Samson Olofinsae
+
+# Currently, the project uses only standard Python libraries (argparse, sys, etc.)
+# No third-party packages are required as of this version.
+# This file is maintained for future scalability.
+
+# Example future entries (uncomment and update as needed):
+# biopython==1.81       # For advanced biological sequence handling
+# pytest==8.1.1          # For automated testing
+# pandas==2.2.2          # For structured data analysis
+# numpy==1.26.4          # For numerical computations
+
+# To regenerate this file after installing new packages:
+# pip freeze > requirements.txt
