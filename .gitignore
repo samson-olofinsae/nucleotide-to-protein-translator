@@ -7,3 +7,6 @@ __pycache__/
 # Ignore local virtual environment directory (commonly named venv/)
 # This folder stores dependencies and should not be tracked in Git
 venv/
+
+# Ignore a file that contains the list of SOP used for this project
+SOP.md
