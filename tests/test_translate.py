@@ -15,7 +15,7 @@ Purpose:
 Author: Samson Olofinsae
 Created: 2025-06-05
 Usage:
-    python -m unittest tests/test_translate.py
+    python3 -m unittest tests/test_translate.py
 """
 
 
