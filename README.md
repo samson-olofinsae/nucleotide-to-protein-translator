@@ -5,7 +5,9 @@ This Python script translates a **DNA nucleotide sequence** into its correspondi
 ---
 
 ## **Purpose**
+
 Developed as part of **clinical bioinformatics training**, in line with **departmental SOPs** on:
+
 - **Software development**
 - **Version control**
 - **Audit traceability**
@@ -14,6 +16,7 @@ Developed as part of **clinical bioinformatics training**, in line with **depart
 ---
 
 ## **Features**
+
 - **Command-line input** via `--seq`
 - **Sequence validation** (length & valid characters)
 - **Translation** using the standard codon table
@@ -23,10 +26,12 @@ Developed as part of **clinical bioinformatics training**, in line with **depart
 ---
 
 ## **Usage**
+
 ```bash
 python3 translate_v1.py --seq ATGGCGTAA
+```
 
-
+---
 
 ## Testing
 
@@ -52,4 +57,3 @@ Or run them individually:
 python3 -m unittest tests/test_translate.py
 python3 -m unittest tests/test_cli.py
 ```
-
