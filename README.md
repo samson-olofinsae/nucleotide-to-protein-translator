@@ -25,3 +25,31 @@ Developed as part of **clinical bioinformatics training**, in line with **depart
 ## **Usage**
 ```bash
 python3 translate_v1.py --seq ATGGCGTAA
+
+
+
+## Testing
+
+This project includes two layers of unit testing:
+
+- **Internal Logic Tests** (`tests/test_translate.py`)  
+  Verifies DNA validation, codon translation, error handling, and biological correctness.
+
+- **Command-Line Interface (CLI) Tests** (`tests/test_cli.py`)  
+  Simulates running the script with real input via the command line to validate user interaction and error output.
+
+---
+
+Run all tests with:
+
+```bash
+python3 -m unittest discover -s tests
+```
+
+Or run them individually:
+
+```bash
+python3 -m unittest tests/test_translate.py
+python3 -m unittest tests/test_cli.py
+```
+
