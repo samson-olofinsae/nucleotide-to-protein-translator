@@ -41,7 +41,7 @@ class NucleotideTranslator:
         'AAA':'K', 'AAG':'K',                        # Lysine
         'AGC':'S', 'AGT':'S', 'AGA':'R', 'AGG':'R',  # Serine & Arginine
         'CTA':'L', 'CTC':'L', 'CTG':'L', 'CTT':'L',  # Leucine
-        'CCA':'P', 'CCC':'P', 'CCG':'P', 'CCT':'P',  # Proline
+        'CCA':'P', #'CCC':'P', 'CCG':'P', 'CCT':'P',  # Proline
         'CAC':'H', 'CAT':'H',                        # Histidine
         'CAA':'Q', 'CAG':'Q',                        # Glutamine
         'CGA':'R', 'CGC':'R', 'CGG':'R', 'CGT':'R',  # Arginine
@@ -131,20 +131,21 @@ def main():
 
     # Instantiate the NucleotideTranslator with the provided sequence
     translator = NucleotideTranslator(args.seq)
+    protein = translator.translate()
 
-    try:
-        # Attempt to validate and translate the input DNA sequence
-        protein = translator.translate()
+    # try:
+    #     # Attempt to validate and translate the input DNA sequence
+    #     protein = translator.translate()
 
-        # Output the resulting amino acid sequence to stdout
-        print("Protein:", protein)
+    #     # Output the resulting amino acid sequence to stdout
+    #     print("Protein:", protein)
 
-    except ValueError as e:
-        # If validation fails, print the error message to stderr
-        print("Error:", e, file=sys.stderr)
+    # except ValueError as e:
+    #     # If validation fails, print the error message to stderr
+    #     print("Error:", e, file=sys.stderr)
 
-        # Exit with status code 1 to indicate an error (used by CLI tools and test suites)
-        sys.exit(1)
+    #     # Exit with status code 1 to indicate an error (used by CLI tools and test suites)
+    #     sys.exit(1)
 
 
 # Standard Python practice: run `main()` only if this script is executed directly
