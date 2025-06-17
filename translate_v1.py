@@ -41,7 +41,7 @@ class NucleotideTranslator:
         'AAA':'K', 'AAG':'K',                        # Lysine
         'AGC':'S', 'AGT':'S', 'AGA':'R', 'AGG':'R',  # Serine & Arginine
         'CTA':'L', 'CTC':'L', 'CTG':'L', 'CTT':'L',  # Leucine
-        'CCA':'P', 'CCC':'P', 'CCG':'P', 'CCT':'P',  # Proline
+        'CCA':'P', #'CCC':'P', 'CCG':'P', 'CCT':'P',  # Proline
         'CAC':'H', 'CAT':'H',                        # Histidine
         'CAA':'Q', 'CAG':'Q',                        # Glutamine
         'CGA':'R', 'CGC':'R', 'CGG':'R', 'CGT':'R',  # Arginine
