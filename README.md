@@ -70,3 +70,22 @@ This script was developed under departmental supervision as part of my Clinical 
 - Compliance with internal SOPs on script annotation and version control
 
 It contributes to STP Equivalence evidence in Domains 2 (Scientific Practice) and 5 (Professional Practice).
+
+
+## Future Improvements Based on Review
+
+Following a constructive code review (June 2025), the following enhancements have been identified for future versions of the script:
+
+- **Commenting Standards**: Reduce over-commenting; focus on explaining "why" rather than "what".
+- **Configuration File**: Externalise the codon table into a config file (e.g., JSON or YAML) for easier updates and flexibility.
+- **Batch Automation**: Add support for reading input sequences from a file (e.g., FASTA or plain text).
+- **Exportable Output**: Write translated protein sequences to an output file (e.g., `.tsv` or `.csv`) for further use by clinical scientists.
+- **Ambiguous Nucleotides**: Improve handling of ambiguous characters like "N", possibly with custom warnings or logs.
+- **Failsafe Redesign**: Replace ambiguous `"X"` amino acid marker with an explicit warning or logging mechanism.
+- **PEP8 Compliance**: Apply consistent formatting with a linter such as `flake8` or `black`.
+
+These updates will be prioritised in future versions to enhance clinical robustness, usability, and maintainability.
+
+
+---
+
